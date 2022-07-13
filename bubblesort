@@ -1,0 +1,49 @@
+#include <stdio.h>
+#define numerals 10
+
+void output(int *a);
+int input(int *a);
+void sort(int *a);
+
+int main() {
+    int data[10];
+    if (input(data) == 0) {
+        sort(data);
+        output(data);
+    }
+    return 0;
+}
+int input(int *a) {
+    char symbol;
+    int flag = 0;
+    for (int *m = a; m - a < numerals; m++) {
+        if (scanf("%d%c", m, &symbol) == 2 && (symbol != ' ' || symbol != '\n')) {
+        } else {
+            printf("n/a");
+            flag = 1;
+            break;
+        }
+    }
+    return flag;
+}
+void sort(int *a) {
+    int rez;
+    for (int i = 0; i < numerals - 1; i++) {
+        for (int j = 0; j < numerals - 1; j++) {
+            if  (a[j] > a[j + 1]) {
+                rez = a[j + 1];
+                a[j + 1] = a[j];
+                a[j] = rez;
+            }
+        }
+    }
+}
+void output(int *a) {
+    for (int i = 0; i < numerals; ++i) {
+        if (i == numerals - 1) {
+            printf("%d", a[i]);
+        } else {
+            printf("%d ", a[i]);
+        }
+    }
+}
