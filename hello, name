@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int name;
+printf("Привет. Как тебя зовут?");
+scanf("%d", &name);
+printf("Здравствуй, %d", name);
+    return 0;
+}
