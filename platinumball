@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+double R, V, m;
+char chr;
+if (scanf("%lf%c", &R, &chr) == 2 && 0 < R && chr == 10) {
+V = ((R*4/3) * R * M_PI *R);
+m = V * 21500;
+printf("%.0lf", m);
+} else {
+printf("n/a");
+}
+return 0;
+}
